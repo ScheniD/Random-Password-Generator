@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Password Generator</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generate a random password</h1>
+    <p class="subtitle">Never use an insecure password again</p>
+
+    <!-- Generate Password Button -->
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <!-- Password Display Box -->
+    <div class="password-box">
+      <span id="password" class="password-display"></span>
+      <!-- Copy Button with Icon -->
+      <button class="copy-btn" onclick="copyPassword()" title="Copy to clipboard">
+        <!-- Two overlapping squares (Copy icon) -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+             fill="currentColor" viewBox="0 0 24 24">
+          <path d="M16 1H4C2.897 1 2 1.897 2 3v14h2V3h10V1zm3 4H8c-1.103 0-2 .897-2 2v14
+                   c0 1.103.897 2 2 2h11c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zm0
+                   16H8V7h11v14z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Password Rules -->
+    <div class="rules">
+      <p>Select your password rules:</p>
+      <label>
+        <input type="checkbox" id="include-uppercase" checked />
+        Include Uppercase (A-Z)
+      </label>
+      <label>
+        <input type="checkbox" id="include-lowercase" checked />
+        Include Lowercase (a-z)
+      </label>
+      <label>
+        <input type="checkbox" id="include-numbers" checked />
+        Include Numbers (0-9)
+      </label>
+      <label>
+        <input type="checkbox" id="include-symbols" checked />
+        Include Symbols (!@#$%...)
+      </label>
+    </div>
+
+<button class="toggle-btn" onclick="toggleMode()" title="Toggle Theme">
+    <img 
+      src="https://img.icons8.com/?size=100&id=45475&format=png&color=000000" 
+      alt="Toggle theme" 
+      width="24" 
+      height="24" 
+    />
+  </button>
+  
+  
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

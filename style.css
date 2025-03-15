@@ -1,0 +1,158 @@
+/* Root Variables for Dark/Light modes */
+:root {
+    --dark-bg: #1A1A1A;
+    --dark-text: #FFFFFF;
+    --dark-card: #2A2A2A;
+  
+    --light-bg: #F5F5F5;
+    --light-text: #333333;
+    --light-card: #FFFFFF;
+  
+    --accent-color: #27ae60; /* Button color (greenish) */
+    --accent-hover: #219150; /* Button hover color */
+  }
+  
+  /* Reset & Basic Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Light Mode Styles */
+  body.light-mode {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+  
+  /* Container centered using flexbox */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  /* Heading & Subtitle */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  body.light-mode .subtitle {
+    color: #666666;
+  }
+  
+  /* Buttons */
+  button {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin: 0.5rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: var(--accent-hover);
+  }
+  
+  /* Password Box */
+  .password-box {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--dark-card);
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px auto;
+    min-width: 300px;
+    justify-content: space-between;
+  }
+  
+  body.light-mode .password-box {
+    background-color: var(--light-card);
+    border: 1px solid #ddd;
+  }
+  
+  /* Password Text */
+  .password-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    word-break: break-all;
+  }
+  
+  /* Copy Button (Icon only) */
+  .copy-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .copy-btn:hover {
+    color: var(--accent-color);
+  }
+  
+  body.light-mode .copy-btn {
+    color: var(--light-text);
+  }
+  
+  /* Password Rules */
+  .rules {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .rules p {
+    margin-bottom: 10px;
+  }
+  
+  .rules label {
+    /* Use flex to align checkbox and text horizontally */
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  .rules input[type="checkbox"] {
+    accent-color: var(--accent-color);
+    width: 1rem;
+    height: 1rem;
+    margin-right: 8px; /* Adjust spacing between checkbox and text */
+    cursor: pointer;
+  }
+  
+  
+  /* Toggle Button (extra spacing) */
+  .toggle-btn {
+    margin-top: 1rem;
+  }
+  
